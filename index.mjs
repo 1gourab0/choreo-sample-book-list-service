@@ -1,7 +1,8 @@
-import app from "./app.mjs";
+const variables = require("./variables");
 
-const PORT = parseInt(process.env.PORT) || 8080;
+const app = require("./app");
+const port = variables.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`listening on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`API Gateway running on port ${port}`);
 });
